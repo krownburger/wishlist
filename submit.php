@@ -3,7 +3,7 @@
 header('Content-Type: text/html; charset=utf-8');
 
 // Konfiguration - ntfy topic
-$ntfyTopic = 'hitlovers.dk-wishlist';
+$ntfyTopic = 'hitloversdk-wishlist';
 $ntfyUrl = 'https://ntfy.sh/' . $ntfyTopic;
 
 // Fejlmeddelelser og succes

@@ -14,7 +14,7 @@
 ## Hurtig start
 
 1. **Upload filerne** til din webserver (f.eks. hitlovers.dk/wishlist/)
-2. **Abonner på ntfy-topic** i din ntfy-app: `hitlovers.dk-wishlist`
+2. **Abonner på ntfy-topic** i din ntfy-app: `hitloversdk-wishlist`
 3. **Test formularen** - Udfyld og send et ønske for at verificere det virker
 
 ## Filer
@@ -30,7 +30,7 @@
 
 Rediger `submit.php` og ændr linjen:
 ```php
-$ntfyTopic = 'hitlovers.dk-wishlist';
+$ntfyTopic = 'hitloversdk-wishlist';
 ```
 
 ### Ændre sociale medier links
