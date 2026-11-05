@@ -35,11 +35,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Hvis ingen fejl, send ntfy-besked
     if (empty($errors)) {
         // Byg besked
-        $ntfyMessage = "🎵 Ny sanganmodning fra hitlovers.dk/wishlist \n\n" .
-                       "🎤 Kunstner: $artist\n" .
-                       "🎶 Sang: $song\n" .
-                       "👤 Fra: $name\n" .
-                       "💬 Besked: " . ($message ?: 'Ingen besked') . "\n\n" .
+        $ntfyMessage = "🎵 Ny sanganmodning fra hitlovers.dk/wishlist\n\n" .
+                       "🎤 Kunstner:\n**$artist**\n\n" .
+                       "🎶 Sang:\n**$song**\n\n" .
+                       "👤 Fra:\n**$name**\n\n" .
+                       "💬 Besked:\n**" . ($message ?: 'Ingen besked') . "**\n\n" .
                        "⏰ Tid: " . date('d/m/Y H:i:s');
 
         // Send til ntfy.sh
@@ -51,8 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Content-Type: text/plain',
             'Title: 🎵 Ny sanganmodning - Hitlovers',
-            'Priority: high',
-            'Tags: music,song,request'
+            'Priority: high'
         ]);
         $response = curl_exec($ch);
         curl_close($ch);
