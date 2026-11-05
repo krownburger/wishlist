@@ -36,10 +36,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($errors)) {
         // Byg besked
         $ntfyMessage = "🎵 Ny sanganmodning fra hitlovers.dk/wishlist\n\n" .
-                       "🎤 Kunstner:\n**$artist**\n\n" .
-                       "🎶 Sang:\n**$song**\n\n" .
-                       "👤 Fra:\n**$name**\n\n" .
-                       "💬 Besked:\n**" . ($message ?: 'Ingen besked') . "**\n\n" .
+                       "🎤 Kunstner: $artist\n\n" .
+                       "🎶 Sang: $song\n\n" .
+                       "👤 Fra: $name\n\n" .
+                       "💬 Besked: " . ($message ?: 'Ingen besked') . "\n\n" .
                        "⏰ Tid: " . date('d/m/Y H:i:s');
 
         // Send til ntfy.sh
